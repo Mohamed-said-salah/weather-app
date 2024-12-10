@@ -40,6 +40,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
               /// Find City Button
               ElevatedButton(
                 onPressed: _fetchWeather,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
                 child: const Text(
                   'Get Weather',
                   style: TextStyle(
@@ -110,13 +113,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
         switch (result.status) {
           case WeatherStatus.noCity:
-            _errorMessage = 'City not found.';
+            _errorMessage = 'City not found. Please try again.';
             break;
           case WeatherStatus.somethingWentWrong:
-            _errorMessage = 'Something went wrong.';
+            _errorMessage = 'Something went wrong. Please try again.';
             break;
           case WeatherStatus.networkError:
-            _errorMessage = 'Network error.';
+            _errorMessage =
+                'Network error. Please check your internet connection and try again.';
           default:
         }
       });
