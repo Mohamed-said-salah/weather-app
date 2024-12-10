@@ -46,12 +46,11 @@ Prerequisites
       flutter run
    ```
 
-   ``` bash
+   ``` 
       # Build the APK
       flutter build apk --release
    ```
 ## Project Structure
-
    ``` bash
       .
       └── lib/
@@ -66,7 +65,7 @@ Prerequisites
 
 ## ScreenShots 🖼️
 <div align='center'>
-  <img height="460px" src="https://github.com/user-attachments/assets/56bd3506-337e-488c-9f12-8220326dcdb8">
-  <img height="460px" src="https://github.com/user-attachments/assets/0fff25fa-599f-43a3-97d7-192f86f553cb">
+  <img height="460px" src="https://github.com/user-attachments/assets/c0d7a9aa-c74e-4c49-bb3a-ccce9038244a">
+  <img height="460px" src="https://github.com/user-attachments/assets/4bc581ca-823f-4ed6-8b92-c041e5a23406">
 <hr/>
 </div>
