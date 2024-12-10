@@ -19,7 +19,7 @@ A simple weather app built with Flutter that fetches and displays current weathe
  * Android Studio
 
 ## Get the App 📱
- * Get the apk of the app from [**Drive**](https://drive.google.com/file/d/1-esJne1M4qnIHXZZwMDvN_6noo_f6j0t/view?usp=sharing)
+ * Get the apk of the app from [**Drive**](https://drive.google.com/file/d/1SQQQ9aAKEY5mj3K3xC_HbzevlvnDqt-F/view?usp=sharing)
 
 ## Setup 💽
 To get a local copy up and running, follow these instructions.
