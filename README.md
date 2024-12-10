@@ -61,8 +61,6 @@ Prerequisites
           │   └── weather_model.dart
           ├── screens/
           │   └── weather_screen.dart
-          ├── widgets/
-          │   └── 
           └── main.dart
    ```
 
