@@ -14,6 +14,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Weather? _weather;
   String _errorMessage = '';
 
+  /// A Scaffold that displays a text field, a button, and a column of text
+  /// and an image. The text field is used to enter a city name, and the button
+  /// triggers a call to the weather API to fetch the weather for the city.
+  /// The column displays the city name, current temperature, a description of
+  /// the current weather, and an image representing the current weather. If
+  /// there is an error, the column displays the error message in red.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,21 +30,34 @@ class _WeatherScreenState extends State<WeatherScreen> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
+              /// City Text Field
               TextField(
                 controller: _controller,
                 decoration: const InputDecoration(hintText: 'Enter city name'),
               ),
               const SizedBox(height: 10),
+
+              /// Find City Button
               ElevatedButton(
                 onPressed: _fetchWeather,
-                child: const Text('Get Weather'),
+                child: const Text(
+                  'Get Weather',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
+
+              /// Error Message
               const SizedBox(height: 20),
               if (_errorMessage.isNotEmpty)
                 Text(
                   _errorMessage,
                   style: const TextStyle(color: Colors.red),
                 ),
+
+              /// Weather Information
               if (_weather != null)
                 Column(
                   children: [
@@ -59,6 +78,16 @@ class _WeatherScreenState extends State<WeatherScreen> {
     );
   }
 
+  /// Triggers a call to the weather API to fetch the weather for the city
+  /// name entered in the text field.
+  ///
+  /// If the text field is empty, it displays an error message asking the user
+  /// to enter a city name. If the city is not found, it displays an error
+  /// message indicating that the city was not found. If there is a network error
+  /// or an unexpected error, it displays an error message indicating the
+  /// error. If the request is successful, it displays the city name, current
+  /// temperature, a description of the current weather, and an image
+  /// representing the current weather.
   void _fetchWeather() async {
     if (_controller.text.isEmpty) {
       setState(() {
